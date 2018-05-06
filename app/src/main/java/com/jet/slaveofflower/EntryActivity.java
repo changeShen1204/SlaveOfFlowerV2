@@ -51,7 +51,6 @@ public class EntryActivity extends BaseActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entry);
         ButterKnife.bind(this);
@@ -64,11 +63,9 @@ public class EntryActivity extends BaseActivity{
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Action1<Long>()
                 {
-
                     @Override
                     public void call(Long aLong)
                     {
-
                         startAnim();
                     }
                 });

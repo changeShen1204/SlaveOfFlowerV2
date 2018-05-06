@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.jet.slaveofflower"
           xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-feature android:name="android.hardware.camera"
                   android:required="false"
         />
@@ -25,6 +32,7 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".webview.WebviewActivity"/>
         <activity android:name=".Fragment.NotePagerActivity"/>
+        <activity android:name="com.jet.slaveofflower.Fragment.MainActivity"/>
     </application>
 
 </manifest>

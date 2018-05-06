@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.RadioGroup;
 
 import com.jet.slaveofflower.Fragment.FlowerFragment;
-import com.jet.slaveofflower.Fragment.HospitalFragment;
+import com.jet.slaveofflower.Fragment.HomeActivity;
 import com.jet.slaveofflower.Fragment.NoteListFragment;
 import com.jet.slaveofflower.Fragment.Sunflower_Fragment;
 
@@ -25,9 +25,10 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.viewpager)
     ViewPager viewpager;
     private FlowerFragment flowerFragment;
-    private HospitalFragment hospitalFragment;
+    //private HospitalFragment hospitalFragment;
     private Sunflower_Fragment sunflowerFragment;
     private NoteListFragment mMyNoteFragment;
+    private HomeActivity homeActivity;
     private List<Fragment> listFragment;
     private int currentFragment;
 
@@ -87,12 +88,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void initViewpagerAndFragment(){
         flowerFragment=FlowerFragment.newInstance();
-        hospitalFragment=HospitalFragment.newInstance();
+        //hospitalFragment=HospitalFragment.newInstance();
+        homeActivity=HomeActivity.newInstance();
         sunflowerFragment = Sunflower_Fragment.newInstance();
         mMyNoteFragment= NoteListFragment.newInstance();
         listFragment=new ArrayList<>();
         listFragment.add(flowerFragment);
-        listFragment.add(hospitalFragment);
+        listFragment.add(homeActivity);
         listFragment.add(sunflowerFragment);
         listFragment.add(mMyNoteFragment);
         viewpager.setOnPageChangeListener(onPageChangeListener);

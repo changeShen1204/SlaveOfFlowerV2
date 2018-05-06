@@ -129,5 +129,4 @@ public class NoteListFragment extends Fragment{
             mNotes.addAll(notes);
         }
     }
-
 }
